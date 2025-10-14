@@ -1,0 +1,777 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Delius", cursive;
+}
+/* ___________________________________________________________________________________________________________________________________________ */
+.container {
+  margin: auto;
+  width: 85%;
+  height: 100%;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+.section {
+  padding: 50px 0px;
+}
+.second-title {
+  font-size: 27px;
+  letter-spacing: 2px;
+  color: #002233;
+  text-align: center;
+}
+/* ___________________________________________________________________________________________________________________________________________ */
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 5;
+}
+.quick-links {
+  border-bottom: 1px solid #dddddd;
+}
+.quick-links .content {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0px 5px;
+}
+.quick-links div ul li {
+  display: inline-block;
+}
+.quick-links div ul li a {
+  padding: 0px 8px;
+  position: relative;
+  font-size: 14px;
+  color: white;
+}
+.quick-links div ul li a::after,
+.quick-links div ul li a::before {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 0%;
+  background-color: #4da8da;
+  transition: 0.5s;
+}
+.quick-links div ul li a::before {
+  left: 0;
+  bottom: 0;
+}
+.quick-links div ul li a::after {
+  right: 0;
+  top: 0;
+}
+.quick-links div ul li a:hover::before {
+  height: 100%;
+}
+.quick-links div ul li a:hover::after {
+  height: 100%;
+}
+.quick-links div ul li a i {
+  transform: rotateY(0deg);
+  transition: 0.5s;
+  font-size: 16px;
+}
+.quick-links div ul li a:hover i {
+  transform: rotateY(180deg);
+  color: #4da8da;
+}
+/* ________________________________________________________________________________________________________________________________ */
+.navbar .content {
+  padding: 10px 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar .logo a,
+.footer-section .logo a {
+  color: #ccc;
+  font-weight: bolder;
+  font-family: serif;
+  letter-spacing: -14px;
+  text-shadow: 1px 3px 5px #4da8da;
+  text-transform: uppercase;
+  font-size: 50px;
+  transition: 0.5s;
+}
+/* ---------------------------------- */
+.navbar .links li {
+  display: inline-block;
+  position: relative;
+  font-size: 18px;
+  padding: 10px 0;
+  list-style: none;
+}
+.navbar .links > li::after,
+.navbar .links > li::before {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 0%;
+  background-color: #4da8da;
+  transition: 0.5s;
+}
+.navbar .links > li::before {
+  left: 0;
+  bottom: 0;
+}
+.navbar .links > li::after {
+  right: 0;
+  top: 0;
+}
+.navbar .links > li:hover::before,
+.navbar .links > li:hover::after {
+  width: 100%;
+}
+.navbar .links li .dropdown-menu {
+  display: flex;
+  justify-content: space-between;
+  transform: translateX(-33%) scale(0);
+  top: 50px;
+  background-color: #eee;
+  width: 320px;
+  position: absolute;
+  padding: 20px;
+  border-radius: 20px;
+  z-index: 5;
+  transition: 0.7s;
+  box-shadow: 1px 1px 5px 1px gray;
+}
+.navbar .links li .dropdown-menu span {
+  padding-bottom: 5px;
+  display: inline-block;
+  font-size: 16px;
+  border-bottom: 3px dotted gray;
+  color: #000e14;
+}
+.navbar .links .dropdown-link:hover .dropdown-menu {
+  transform: translateX(-33%) scale(1);
+}
+.navbar .links li .dropdown-menu ul li {
+  display: block;
+  font-size: 16px;
+  color: #000e14;
+}
+.navbar .links li .dropdown-menu ul li a {
+  color: #000e14;
+}
+.navbar .links li .dropdown-menu ul li:hover a {
+  font-size: 18px;
+  padding: 8px;
+  color: #4da8da;
+}
+.navbar .links li a i {
+  font-size: 14px;
+}
+.navbar .links li a {
+  padding: 10px 12px;
+  position: relative;
+  transition: 0.5s;
+  color: white;
+}
+.navbar .links > li > a::after,
+.navbar .links > li > a::before {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 0%;
+  background-color: #4da8da;
+  transition: 0.5s;
+}
+.navbar .links > li > a::before {
+  left: 0;
+  bottom: 0px;
+}
+.navbar .links > li > a::after {
+  right: 0;
+  top: 0px;
+}
+.navbar .links > li:hover > a::before {
+  height: 100%;
+}
+.navbar .links > li:hover > a::after {
+  height: 100%;
+}
+/* ------------------------------------ */
+.navbar .icons i {
+  margin-left: 10px;
+  font-size: 18px;
+  transition: 0.3s;
+  color: white;
+}
+.navbar .icons i:hover {
+  color: #4da8da;
+  transform: scale(1.2);
+}
+.navbar .icons .cart {
+  position: relative;
+}
+.navbar .icons .cart span {
+  position: absolute;
+  top: -15px;
+  left: 30%;
+  text-align: center;
+  background-color: #4da8da;
+  width: 19px;
+  height: 19px;
+  font-weight: 700;
+  font-size: 13px;
+  border-radius: 50%;
+  color: ede0d4;
+  transition: 0.3s;
+}
+.navbar .icons .cart:hover span {
+  top: -20px;
+}
+/* ----------------------------------------------------------------- */
+.discount {
+  text-align: center;
+  background-color: #002233;
+  color: #fff;
+  padding: 8px 0px;
+  font-size: 16px;
+  text-transform: capitalize;
+  word-spacing: 2px;
+}
+.discount p a,
+.fashion-section .content .fashion-card .buy-model a,
+.footer-section .copyright p a {
+  transition: 0.3s;
+  letter-spacing: 0;
+  color: white;
+  border-bottom: none;
+  color: #f9dcc4;
+  border-bottom: 1px solid #f9dcc4;
+}
+.discount p a:hover,
+.fashion-section .content .fashion-card .buy-model a:hover,
+.footer-section .copyright p a:hover {
+  letter-spacing: 2px;
+}
+/* ______________________________________________________________________________________________________ */
+.hero-section {
+  height: 110vh;
+  background: url("../images/hero.png") no-repeat top;
+  background-size: cover;
+}
+.hero-section .content {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  color: white;
+}
+.hero-section .content div {
+  margin-top: 150px;
+  width: 33%;
+  text-align: center;
+}
+.hero-section .content div h3 {
+  font-family: "Birthstone", cursive;
+  font-size: 35px;
+  font-weight: 500;
+  color: #4da8da;
+  margin-bottom: 15px;
+}
+.hero-section .content div h1 {
+  font-size: 50px;
+  font-family: sans-serif;
+}
+.hero-section .content div p {
+  margin: 25px 0px 30px;
+  padding: 0px 10px;
+  color: gray;
+  letter-spacing: 1px;
+}
+.hero-section .content div button {
+  padding: 18px 35px;
+  font-size: 19px;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 5px;
+  color: #eee9e8;
+  background-color: #090410;
+  transition: 0.5s;
+}
+.hero-section .content div button:hover {
+  background-color: #eee9e8;
+  color: #090410;
+}
+/* __________________________________________________________________ */
+.fashion-section .content {
+  display: flex;
+  justify-content: space-between;
+}
+.fashion-section .content .fashion-card {
+  flex-basis: 26%;
+  position: relative;
+  height: 450px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+.fashion-section .content .fashion-card::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 30%;
+  width: 100%;
+  background: -webkit-linear-gradient(top, transparent, black);
+}
+.fashion-section .content .fashion-card img {
+  width: 100%;
+  height: 100%;
+  transition: 1s;
+}
+.fashion-section .content .fashion-card:hover img {
+  transform: scale(1.1);
+}
+.fashion-section .content .fashion-card .buy-model {
+  position: absolute;
+  z-index: 1;
+  bottom: -5%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: #fff;
+  transition: 1s;
+}
+.fashion-section .content .fashion-card:hover .buy-model {
+  bottom: 4%;
+}
+.fashion-section .content .fashion-card .buy-model h2 {
+  margin-bottom: 18px;
+}
+/* _____________________________________________________________ */
+.trending-section .trending-head {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid gray;
+  padding-bottom: 25px;
+}
+.trending-section .trending-head ul li {
+  list-style: none;
+  display: inline-block;
+  margin-left: 15px;
+  font-size: 18px;
+}
+.trending-section .trending-head ul li a {
+  transition: 0.5s;
+  padding-bottom: 33px;
+}
+.trending-section .trending-head ul li a:hover {
+  color: #4da8da;
+}
+.trending-section .trending-head ul li .active-link {
+  color: #4da8da;
+  font-weight: 600;
+  border-bottom: 3px solid #4da8da;
+}
+/* ----------------------------------- */
+.trending-section .trending-cards,
+.like-section .like-cards,
+.news-section .content .news-cards {
+  display: flex;
+  gap: 30px;
+  margin-top: 40px;
+  position: relative;
+}
+.trending-section .trending-cards > a,
+.testimonial-section .content > a,
+.like-section .content > a {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 35px;
+  color: gray;
+}
+.trending-section .trending-cards .right-arrow,
+.testimonial-section .right-arrow,
+.like-section .right-arrow {
+  right: -3%;
+}
+.trending-section .trending-cards .left-arrow,
+.testimonial-section .left-arrow,
+.like-section .left-arrow {
+  left: -3%;
+}
+.trending-section .trending-cards > a i:hover,
+.testimonial-section .content > a i:hover,
+.like-section .content > a i:hover {
+  color: black;
+  transition: 0.5s;
+}
+/* -------------------------------------------------- */
+.trending-section .trending-cards .card,
+.like-section .like-cards .card {
+  flex-basis: 25%;
+}
+.trending-section .trending-cards .card .view-img,
+.like-section .like-cards .card .view-img {
+  position: relative;
+  width: 100%;
+  perspective: 600px;
+}
+.trending-section .trending-cards .card .view-img img,
+.like-section .like-cards .card .view-img img {
+  height: 450px;
+  width: 100%;
+  border-radius: 10px;
+}
+.trending-section .trending-cards .card .view-img img:last-of-type,
+.like-section .like-cards .card .view-img img:last-of-type {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: rotateY(180deg);
+  transition: all 0.7s linear;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+}
+.trending-section .trending-cards .card:hover .view-img:hover img:last-of-type {
+  transform: rotateY(0deg);
+}
+/* --------------------------------------------------- */
+.trending-section .trending-cards .card .view-img .icons,
+.like-section .like-cards .card .view-img .icons {
+  visibility: hidden;
+  opacity: 0;
+  transition: 1s;
+  position: absolute;
+  bottom: 18%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.trending-section .trending-cards .card:hover .view-img .icons,
+.like-section .like-cards .card:hover .view-img .icons {
+  visibility: visible;
+  opacity: 1;
+  bottom: 22%;
+}
+.trending-section .trending-cards .card .view-img .icons a i,
+.like-section .like-cards .card .view-img .icons a i {
+  font-size: 22px;
+  margin: 0;
+  padding: 15px;
+  width: 55px;
+}
+.trending-section .trending-cards .card .view-img .icons i:hover,
+.like-section .like-cards .card .view-img .icons i:hover {
+  color: #fff;
+  background-color: #4da8da;
+  animation: icons-color 0.3s linear 2;
+}
+@keyframes icons-color {
+  25% {
+    color: black;
+  }
+  50% {
+    color: #4da8da;
+  }
+  75% {
+    color: black;
+  }
+  100% {
+    color: #4da8da;
+  }
+}
+/* ----------------------------------------------------------- */
+.trending-section .trending-cards .card .info,
+.like-section .like-cards .card .info {
+  text-align: center;
+  margin-top: 20px;
+}
+.trending-section .trending-cards .card .info a,
+.like-section .like-cards .card .info a,
+.news-section .news-cards .card .info a:first-of-type {
+  font-weight: 100;
+  font-size: 22px;
+  transition: 0.5s;
+  display: block;
+}
+.trending-section .trending-cards .card:hover .info a,
+.like-section .like-cards .card:hover .info a,
+.news-section .news-cards .card:hover .info a:first-of-type {
+  color: #4da8da;
+}
+.trending-section .trending-cards .card .info p span,
+.like-section .like-cards .card .info p span {
+  display: inline-block;
+  margin-top: 10px;
+  margin-left: 10px;
+  font-size: 18px;
+  letter-spacing: 1.5px;
+  color: gray;
+}
+.trending-section .trending-cards .card .info p span:last-of-type,
+.like-section .like-cards .card .info p span:last-of-type {
+  text-decoration: line-through;
+}
+/* ___________________________________________________________________________ */
+.testimonial-section {
+  border-top: 1px solid gray;
+  border-bottom: 1px solid gray;
+  background-color: #4da8da22;
+  height: 50vh;
+  margin: 25px 0px;
+}
+.testimonial-section .content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  text-align: center;
+}
+.testimonial-section .content .right-arrow {
+  right: 2%;
+}
+.testimonial-section .content .left-arrow {
+  left: 2%;
+}
+.testimonial-section .content .description {
+  letter-spacing: 1.5px;
+  color: gray;
+  font-size: 22px;
+  width: 65%;
+  line-height: 37px;
+  margin: auto;
+}
+.testimonial-section .content .person-info {
+  display: flex;
+  margin: 0 auto;
+}
+.testimonial-section .content .person-info img {
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+}
+.testimonial-section .content .person-info .info {
+  text-align: start;
+  margin: 18px 0px 0px 8px;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+/* ______________________________________________________________________ */
+.like-section .content {
+  position: relative;
+  text-align: center;
+}
+.like-section .like-cards .card {
+  overflow: hidden;
+}
+.like-section .like-cards .card .view-img img:last-of-type {
+  transform: translateY(-100%);
+  opacity: 0;
+  transition: all 0.5s linear;
+  visibility: hidden;
+}
+.like-section .like-cards .card:hover .view-img img:last-of-type {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+/* _______________________________________________________________________ */
+.news-section {
+  border-top: 1px solid gray;
+  border-bottom: 1px solid gray;
+  background-color: #4da8da22;
+}
+.news-section .news-cards {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+.news-section .news-cards .card {
+  flex-basis: 28%;
+}
+.news-section .news-cards .card .view-img img {
+  height: 450px;
+  width: 100%;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  transition: all 0.2s linear;
+}
+.news-section .news-cards .card .view-img img:hover {
+  transform: scale(1.05);
+}
+.news-section .news-cards .card .view-img .info span {
+  margin-bottom: 15px;
+  display: inline-block;
+  font-weight: 100;
+  color: gray;
+}
+.news-section .news-cards .card .view-img .info p {
+  margin: 15px 0px;
+}
+.news-section .news-cards .card .view-img .info a:last-of-type {
+  text-decoration: underline;
+  font-size: 20px;
+  transition: all 0.2s linear;
+  display: inline-block;
+}
+.news-section .news-cards .card .view-img .info a:hover:last-of-type {
+  font-size: 22px;
+}
+/* __________________________________________________________________ */
+.delivery-section .delivery-cards {
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+.delivery-section .delivery-cards .card .icons {
+  font-size: 50px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  height: 55px;
+  width: 70px;
+  margin: auto;
+}
+.delivery-section .delivery-cards .card .icons i {
+  transition: 0.5s;
+}
+.delivery-section .delivery-cards .card .icons i:first-of-type {
+  opacity: 0.4;
+}
+.delivery-section .delivery-cards .card .icons:hover i:first-of-type {
+  transform: translateY(-110%);
+}
+.delivery-section .delivery-cards .card .icons:hover i:last-of-type {
+  transform: translateY(-110%);
+}
+.delivery-section .delivery-cards .card h3 {
+  margin: 12px 0px;
+  font-size: 20px;
+}
+.delivery-section .delivery-cards .card p {
+  font-size: 14px;
+}
+/* ______________________________________________________________________________ */
+.footer-section {
+  padding: 30px 0px;
+  background-color: #000e14;
+  color: white;
+}
+.footer-section .search {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer-section .search .title h2 {
+  margin-bottom: 15px;
+}
+.footer-section .search .input input:first-of-type {
+  width: 400px;
+  height: 55px;
+  border-radius: 5px;
+  padding: 20px;
+  margin-right: 10px;
+}
+.footer-section .search .input input:first-of-type::placeholder {
+  font-size: 20px;
+}
+.footer-section .search .input input:last-of-type {
+  background-color: #4da8da;
+  width: 150px;
+  height: 55px;
+  border-radius: 5px;
+}
+.footer-section .search .input [value="Subscribe"] {
+  color: white;
+  font-size: 20px;
+}
+.footer-section .search .icons i {
+  color: #fff;
+  opacity: 0.4;
+  margin-left: 5px;
+  transition: 0.5s;
+  font-size: 25px;
+}
+.footer-section .search .icons i:hover {
+  transform: scale(1.2);
+  opacity: 1;
+}
+/* ---------------------------------------- */
+.footer-section .links {
+  margin: 20px 0px;
+  border-top: 2px solid #aaa;
+  border-bottom: 2px solid #aaa;
+  padding: 40px 0px;
+}
+.footer-section .links nav ul {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+}
+.footer-section .links nav ul .logo {
+  text-align: start;
+}
+.footer-section .links nav ul li {
+  width: 150px;
+}
+.footer-section .links nav ul li h3 {
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+.footer-section .links nav ul li ul {
+  flex-direction: column;
+  width: 100%;
+}
+.footer-section .links nav ul li ul li a {
+  color: gray;
+  margin: 10px 0px;
+  font-size: 17px;
+  display: inline-block;
+  transition: 0.5s;
+  text-align: start;
+}
+
+.footer-section .links nav ul li ul li a:hover {
+  text-decoration: underline;
+  transform: scale(1.1) translateX(-5px);
+}
+/* --------------------------------------------------- */
+.footer-section .copyright p {
+  text-align: center;
+}
+.footer-section .copyright p a {
+  color: #4da8da;
+  border-bottom-color: rgba(255, 0, 0, 0);
+  font-size: 17px;
+  margin-left: 5px;
+}
+.footer-section .copyright p a:hover {
+  border-bottom-color: #4da8da;
+}
+.footer-section .copyright p i {
+  animation: heart 1s linear infinite;
+}
+@keyframes heart {
+  0% {
+    color: black;
+    transform: scale(1);
+  }
+  50% {
+    color: #4da8da;
+    transform: scale(1.4);
+  }
+  100% {
+    color: black;
+    transform: scale(1);
+  }
+}
