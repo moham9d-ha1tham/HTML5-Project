@@ -20,7 +20,7 @@ a {
   padding: 50px 0px;
 }
 .second-title {
-  font-size: 27px;
+  font-size: 28px;
   letter-spacing: 2px;
   color: #002233;
   text-align: center;
@@ -334,18 +334,19 @@ header {
 .fashion-section .content .fashion-card .buy-model {
   position: absolute;
   z-index: 1;
-  bottom: -5%;
+  bottom: -4%;
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
   color: #fff;
   transition: 1s;
+  width: 200px;
 }
 .fashion-section .content .fashion-card:hover .buy-model {
   bottom: 4%;
 }
 .fashion-section .content .fashion-card .buy-model h2 {
-  margin-bottom: 18px;
+  margin-bottom: 25px;
 }
 /* _____________________________________________________________ */
 .trending-section .trending-head {
@@ -357,12 +358,12 @@ header {
 .trending-section .trending-head ul li {
   list-style: none;
   display: inline-block;
-  margin-left: 15px;
+  margin-left: 25px;
   font-size: 18px;
 }
 .trending-section .trending-head ul li a {
   transition: 0.5s;
-  padding-bottom: 33px;
+  padding-bottom: 34px;
 }
 .trending-section .trending-head ul li a:hover {
   color: #4da8da;
@@ -373,15 +374,19 @@ header {
   border-bottom: 3px solid #4da8da;
 }
 /* ----------------------------------- */
+.trending-section .content,
+.testimonial-section .content,
+.like-section .content {
+  position: relative;
+}
 .trending-section .trending-cards,
 .like-section .like-cards,
-.news-section .content .news-cards {
+.news-section .news-cards {
   display: flex;
   gap: 30px;
   margin-top: 40px;
-  position: relative;
 }
-.trending-section .trending-cards > a,
+.trending-section .content > a,
 .testimonial-section .content > a,
 .like-section .content > a {
   position: absolute;
@@ -390,17 +395,17 @@ header {
   font-size: 35px;
   color: gray;
 }
-.trending-section .trending-cards .right-arrow,
+.trending-section .content .right-arrow,
 .testimonial-section .right-arrow,
 .like-section .right-arrow {
   right: -3%;
 }
-.trending-section .trending-cards .left-arrow,
+.trending-section .content .left-arrow,
 .testimonial-section .left-arrow,
 .like-section .left-arrow {
   left: -3%;
 }
-.trending-section .trending-cards > a i:hover,
+.trending-section .content > a i:hover,
 .testimonial-section .content > a i:hover,
 .like-section .content > a i:hover {
   color: black;
@@ -521,7 +526,7 @@ header {
   border-top: 1px solid gray;
   border-bottom: 1px solid gray;
   background-color: #4da8da22;
-  height: 50vh;
+  height: 55vh;
   margin: 25px 0px;
 }
 .testimonial-section .content {
@@ -529,7 +534,6 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  position: relative;
   text-align: center;
 }
 .testimonial-section .content .right-arrow {
@@ -564,10 +568,6 @@ header {
   gap: 10px;
 }
 /* ______________________________________________________________________ */
-.like-section .content {
-  position: relative;
-  text-align: center;
-}
 .like-section .like-cards .card {
   overflow: hidden;
 }
@@ -622,7 +622,7 @@ header {
   display: inline-block;
 }
 .news-section .news-cards .card .view-img .info a:hover:last-of-type {
-  font-size: 22px;
+  transform: scale(1.08);
 }
 /* __________________________________________________________________ */
 .delivery-section .delivery-cards {
@@ -643,20 +643,20 @@ header {
   margin: auto;
 }
 .delivery-section .delivery-cards .card .icons i {
-  transition: 0.5s;
+  transition: 0.3s;
 }
 .delivery-section .delivery-cards .card .icons i:first-of-type {
   opacity: 0.4;
 }
-.delivery-section .delivery-cards .card .icons:hover i:first-of-type {
+.delivery-section .delivery-cards .card:hover .icons i:first-of-type {
   transform: translateY(-110%);
 }
-.delivery-section .delivery-cards .card .icons:hover i:last-of-type {
+.delivery-section .delivery-cards .card:hover .icons i:last-of-type {
   transform: translateY(-110%);
 }
 .delivery-section .delivery-cards .card h3 {
   margin: 12px 0px;
-  font-size: 20px;
+  font-size: 18px;
 }
 .delivery-section .delivery-cards .card p {
   font-size: 14px;
