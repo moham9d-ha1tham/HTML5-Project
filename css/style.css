@@ -82,7 +82,7 @@ header {
   transform: rotateY(180deg);
   color: #4da8da;
 }
-/* ________________________________________________________________________________________________________________________________ */
+/* ___________________________________________________________________________________________________________________________________________ */
 .navbar .content {
   padding: 10px 0px;
   display: flex;
@@ -100,7 +100,7 @@ header {
   font-size: 50px;
   transition: 0.5s;
 }
-/* ---------------------------------- */
+/* ---------------------------------------- */
 .navbar .links li {
   display: inline-block;
   position: relative;
@@ -136,6 +136,7 @@ header {
   top: 50px;
   background-color: #eee;
   width: 320px;
+  height: 220px;
   position: absolute;
   padding: 20px;
   border-radius: 20px;
@@ -198,7 +199,7 @@ header {
 .navbar .links > li:hover > a::after {
   height: 100%;
 }
-/* ------------------------------------ */
+/* ---------------------------------------- */
 .navbar .icons i {
   margin-left: 10px;
   font-size: 18px;
@@ -229,7 +230,7 @@ header {
 .navbar .icons .cart:hover span {
   top: -20px;
 }
-/* ----------------------------------------------------------------- */
+/* ___________________________________________________________________________________________________________________________________________ */
 .discount {
   text-align: center;
   background-color: #002233;
@@ -254,7 +255,7 @@ header {
 .footer-section .copyright p a:hover {
   letter-spacing: 2px;
 }
-/* ______________________________________________________________________________________________________ */
+/* ___________________________________________________________________________________________________________________________________________ */
 .hero-section {
   height: 110vh;
   background: url("../images/hero.png") no-repeat top;
@@ -281,6 +282,7 @@ header {
 .hero-section .content div h1 {
   font-size: 50px;
   font-family: sans-serif;
+  letter-spacing: 1.5px;
 }
 .hero-section .content div p {
   margin: 25px 0px 30px;
@@ -302,7 +304,7 @@ header {
   background-color: #eee9e8;
   color: #090410;
 }
-/* __________________________________________________________________ */
+/* ___________________________________________________________________________________________________________________________________________ */
 .fashion-section .content {
   display: flex;
   justify-content: space-between;
@@ -348,7 +350,7 @@ header {
 .fashion-section .content .fashion-card .buy-model h2 {
   margin-bottom: 25px;
 }
-/* _____________________________________________________________ */
+/* ___________________________________________________________________________________________________________________________________________ */
 .trending-section .trending-head {
   display: flex;
   justify-content: space-between;
@@ -373,7 +375,7 @@ header {
   font-weight: 600;
   border-bottom: 3px solid #4da8da;
 }
-/* ----------------------------------- */
+/* ---------------------------------------- */
 .trending-section .content,
 .testimonial-section .content,
 .like-section .content {
@@ -411,7 +413,7 @@ header {
   color: black;
   transition: 0.5s;
 }
-/* -------------------------------------------------- */
+/* ---------------------------------------- */
 .trending-section .trending-cards .card,
 .like-section .like-cards .card {
   flex-basis: 25%;
@@ -442,7 +444,7 @@ header {
 .trending-section .trending-cards .card:hover .view-img:hover img:last-of-type {
   transform: rotateY(0deg);
 }
-/* --------------------------------------------------- */
+/* ---------------------------------------- */
 .trending-section .trending-cards .card .view-img .icons,
 .like-section .like-cards .card .view-img .icons {
   visibility: hidden;
@@ -489,7 +491,7 @@ header {
     color: #4da8da;
   }
 }
-/* ----------------------------------------------------------- */
+/* ---------------------------------------- */
 .trending-section .trending-cards .card .info,
 .like-section .like-cards .card .info {
   text-align: center;
@@ -521,7 +523,7 @@ header {
 .like-section .like-cards .card .info p span:last-of-type {
   text-decoration: line-through;
 }
-/* ___________________________________________________________________________ */
+/* ___________________________________________________________________________________________________________________________________________ */
 .testimonial-section {
   border-top: 1px solid gray;
   border-bottom: 1px solid gray;
@@ -567,7 +569,7 @@ header {
   flex-direction: column;
   gap: 10px;
 }
-/* ______________________________________________________________________ */
+/* ___________________________________________________________________________________________________________________________________________ */
 .like-section .like-cards .card {
   overflow: hidden;
 }
@@ -582,7 +584,7 @@ header {
   visibility: visible;
   transform: translateY(0);
 }
-/* _______________________________________________________________________ */
+/* ___________________________________________________________________________________________________________________________________________ */
 .news-section {
   border-top: 1px solid gray;
   border-bottom: 1px solid gray;
@@ -624,7 +626,7 @@ header {
 .news-section .news-cards .card .view-img .info a:hover:last-of-type {
   transform: scale(1.08);
 }
-/* __________________________________________________________________ */
+/* ___________________________________________________________________________________________________________________________________________ */
 .delivery-section .delivery-cards {
   padding: 20px 0;
   display: flex;
@@ -661,7 +663,7 @@ header {
 .delivery-section .delivery-cards .card p {
   font-size: 14px;
 }
-/* ______________________________________________________________________________ */
+/* ___________________________________________________________________________________________________________________________________________ */
 .footer-section {
   padding: 30px 0px;
   background-color: #000e14;
@@ -685,15 +687,17 @@ header {
 .footer-section .search .input input:first-of-type::placeholder {
   font-size: 20px;
 }
-.footer-section .search .input input:last-of-type {
-  background-color: #4da8da;
+.footer-section .search .input [value="Subscribe"] {
+  color: white;
+  font-size: 20px;
+  transition: all .3s linear;
+   background-color: #4da8da;
   width: 150px;
   height: 55px;
   border-radius: 5px;
 }
-.footer-section .search .input [value="Subscribe"] {
-  color: white;
-  font-size: 20px;
+.footer-section .search .input [value="Subscribe"]:hover{
+  transform: scale(1.15);
 }
 .footer-section .search .icons i {
   color: #fff;
@@ -726,7 +730,7 @@ header {
 }
 .footer-section .links nav ul li h3 {
   margin-bottom: 10px;
-  font-size: 20px;
+  font-size: 18px;
 }
 .footer-section .links nav ul li ul {
   flex-direction: column;
@@ -745,7 +749,7 @@ header {
   text-decoration: underline;
   transform: scale(1.1) translateX(-5px);
 }
-/* --------------------------------------------------- */
+/* ---------------------------------------- */
 .footer-section .copyright p {
   text-align: center;
 }
